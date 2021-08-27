@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
 
 const BookOurCourse = () => {
   return (
@@ -10,6 +10,7 @@ const BookOurCourse = () => {
           alt="Photo by Road Trip with Raj on Unsplash"
           htmlWidth={800}
           zIndex={30}
+          shadow="md"
         />
         <VStack align="start" spacing={10} ml={12}>
           <Heading textTransform="capitalize" fontSize="6xl">
