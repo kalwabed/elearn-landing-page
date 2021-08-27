@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Hero from 'components/hero'
 import Brands from 'components/brands'
 import PopularCourses from 'components/popular-courses'
+import BookOurCourse from 'components/book-course'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Brands />
       <PopularCourses />
+      <BookOurCourse />
     </>
   )
 }

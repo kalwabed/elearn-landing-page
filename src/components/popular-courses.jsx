@@ -90,11 +90,8 @@ const PopularCourses = () => {
       </Box>
 
       <style jsx global>{`
-        .swiper {
-          position: initial;
-        }
         .swiper-pagination-bullet {
-          padding: 0.75rem;
+          padding: 0.65rem;
         }
       `}</style>
     </Box>
