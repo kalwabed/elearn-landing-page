@@ -34,7 +34,7 @@ const BookOurCourse = () => {
           pos="absolute"
           bottom="-85px"
           bgColor="blue.800"
-          p={12}
+          p={10}
         >
           <Box>
             <Heading textDecor="underline">2.5K+</Heading>
