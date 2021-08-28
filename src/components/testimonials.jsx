@@ -53,7 +53,7 @@ const Testimony = ({ pictureUrl, name, title, role }) => {
     <Box mt={8} p={5} shadow="lg">
       <HStack align="start" spacing={6}>
         <VStack align="start">
-          <Image src={pictureUrl} alt="images from unsplash" htmlWidth={900} />
+          <Image src={pictureUrl} alt="images from unsplash" w={800} />
           <Heading fontSize="3xl" fontWeight="medium">
             {name}
           </Heading>
