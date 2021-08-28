@@ -7,6 +7,7 @@ import PopularCourses from 'components/popular-courses'
 import BookOurCourse from 'components/book-course'
 import Testimonials from 'components/testimonials'
 import Mentors from 'components/mentors'
+import BannerNeedHelp from 'components/banner-need-help'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <BookOurCourse />
       <Testimonials />
       <Mentors />
+      <BannerNeedHelp />
     </>
   )
 }

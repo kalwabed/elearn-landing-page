@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Text, VStack, chakra } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Text, VStack, chakra, Link } from '@chakra-ui/react'
 
 const mentors = [
   { name: 'Luis Saputra', role: 'Business mentor', pictureUrl: '/mentor-james.jpg' },
@@ -9,7 +9,7 @@ const mentors = [
 const Mentors = () => {
   return (
     <Box my={20} py={20} bgColor="blue.800" color="white">
-      <VStack maxW={['full', '8xl']} w="full" mx="auto" align="start" spacing={12}>
+      <VStack maxW={['full', '8xl']} w="full" align="start" mx="auto" spacing={12}>
         <Heading w="50%" fontSize="6xl" textTransform="capitalize">
           Meet with our professional mentors
         </Heading>
@@ -21,6 +21,9 @@ const Mentors = () => {
             </GridItem>
           ))}
         </Grid>
+        <Flex w="full" align="center" justify="center">
+          <Link href="#">View all mentors</Link>
+        </Flex>
       </VStack>
     </Box>
   )
