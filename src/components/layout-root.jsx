@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react'
 
+import Footer from './footer'
 import TopNavigation from './top-navigation'
 
 const LayoutRoot = ({ children }) => {
@@ -9,6 +10,7 @@ const LayoutRoot = ({ children }) => {
       <Box as="main" flex="1 1 auto">
         {children}
       </Box>
+      <Footer />
     </Flex>
   )
 }

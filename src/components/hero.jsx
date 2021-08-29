@@ -9,7 +9,6 @@ import {
   Image,
   Input,
   InputGroup,
-  InputRightAddon,
   InputRightElement,
   Text,
   VStack
@@ -19,7 +18,14 @@ import { HiSearch } from 'react-icons/hi'
 const Hero = () => {
   return (
     <Box w="full" bgGradient="linear(to-t, gray.100, gray.50)" py={6}>
-      <Grid maxW={['full', '8xl']} w="full" mx="auto" templateColumns="repeat(2,1fr)" alignItems="center">
+      <Grid
+        px={[4, 4, 0]}
+        maxW={['2xl', '4xl', '6xl', '8xl']}
+        w="full"
+        mx="auto"
+        templateColumns={{ sm: 'repeat(1,fr)', lg: 'repeat(2,1fr)' }}
+        alignItems="center"
+      >
         <GridItem colSpan={1}>
           <VStack align="start" spacing={6}>
             <Heading as="h1" fontWeight="semibold" fontSize="6xl">
@@ -66,7 +72,7 @@ const Hero = () => {
             </HStack>
           </VStack>
         </GridItem>
-        <GridItem colSpan={1} ml="auto">
+        <GridItem colSpan={1} display={['none', null, 'inherit']} ml="auto">
           <Image src="/e-learning-colored.png" htmlWidth={600} title="Illustrations by PixelTrue" />
         </GridItem>
       </Grid>

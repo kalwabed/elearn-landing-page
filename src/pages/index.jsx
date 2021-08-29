@@ -8,7 +8,6 @@ import BookOurCourse from 'components/book-course'
 import Testimonials from 'components/testimonials'
 import Mentors from 'components/mentors'
 import BannerNeedHelp from 'components/banner-need-help'
-import Footer from 'components/footer'
 
 export default function Home() {
   return (
@@ -23,13 +22,12 @@ export default function Home() {
         />
       </Head>
       <Hero />
-      <Brands />
+      {/* <Brands />
       <PopularCourses />
       <BookOurCourse />
       <Testimonials />
       <Mentors />
-      <BannerNeedHelp />
-      <Footer />
+      <BannerNeedHelp /> */}
     </>
   )
 }

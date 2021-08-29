@@ -17,9 +17,15 @@ import { FiDribbble, FiFacebook, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 const Footer = () => {
   return (
-    <Box as="footer" w="full" bgColor="gray.50" py={20}>
-      <Grid templateColumns="repeat(4,1fr)" gap={20} maxW={['full', '8xl']} w="full" mx="auto">
-        <GridItem colSpan={1}>
+    <Box as="footer" w="full" bgColor="gray.50" py={20} px={[4, 4, 0]}>
+      <Grid
+        templateColumns={{ sm: 'repeat(2,1fr)', lg: 'repeat(4,1fr)' }}
+        gap={[12, 20]}
+        maxW={['2xl', '4xl', '8xl']}
+        w="full"
+        mx="auto"
+      >
+        <GridItem colSpan={[2, null, 1]}>
           <VStack align="start">
             <Heading>
               <Link href="#">eLearn</Link>{' '}
@@ -50,7 +56,7 @@ const Footer = () => {
           </VStack>
         </GridItem>
 
-        <GridItem colSpan={1}>
+        <GridItem colSpan={[2, 1]}>
           <Heading fontSize="2xl">Follow Us</Heading>
           <VStack align="start" mt={5} fontWeight="light">
             <Text>Subscribe for get updates</Text>
