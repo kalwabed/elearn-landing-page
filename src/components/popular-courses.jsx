@@ -1,5 +1,5 @@
 import 'swiper/css/pagination'
-import { Box, Button, Heading, HStack, Image, LinkBox, LinkOverlay, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Heading, HStack, Image, LinkBox, LinkOverlay, Stack, Text, VStack } from '@chakra-ui/react'
 import { Pagination, Lazy, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -60,16 +60,16 @@ const courses = [
 
 const PopularCourses = () => {
   return (
-    <Box maxW={['full', '8xl']} w="full" mx="auto" my={20}>
+    <Box maxW={['full', '8xl']} w="full" mx="auto" my={20} px={[4, 4, 0]}>
       <VStack justify="center" spacing={5}>
         <Heading borderBottom="3px solid black">Our Most Popular Courses</Heading>
-        <Text color="gray.500" textAlign="center" w="40%">
+        <Text color="gray.500" textAlign="center" w={['full', null, '60%', '40%']}>
           It&apos;s a long estabilished fact that a reader will be distracted by the readable of a page when looking at
           it&apos;s layout
         </Text>
       </VStack>
 
-      <HStack justify="space-between" mt={10}>
+      <HStack align="center" justify="space-between" wrap="wrap" mt={10}>
         {courseCategories.map(key => (
           <Box key={key} colSpan={1}>
             <Button colorScheme="blue" variant={key === 'Business' ? 'solid' : 'ghost'} size="lg">
@@ -80,7 +80,30 @@ const PopularCourses = () => {
       </HStack>
 
       <Box my={14}>
-        <Swiper modules={[Pagination, A11y, Lazy]} pagination={{ clickable: true }} spaceBetween={80} slidesPerView={3}>
+        <Swiper
+          modules={[Pagination, A11y, Lazy]}
+          pagination={{ clickable: true }}
+          spaceBetween={80}
+          slidesPerView={3}
+          breakpoints={{
+            360: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50
+            }
+          }}
+        >
           {courses.map(key => (
             <SwiperSlide key={key.title}>
               <CourseCard {...key} />

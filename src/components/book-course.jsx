@@ -3,9 +3,10 @@ import { Box, Button, Flex, Heading, HStack, Image, Text, VStack } from '@chakra
 const BookOurCourse = () => {
   return (
     <Box pos="relative" maxW={['full', '8xl']} w="full" mx="auto" py={10} my={20}>
-      <Flex justify="space-between" align="center">
+      <Flex flexDir={['column', null, 'row']} justify="space-between" align="center">
         <Image
           pos="relative"
+          display={['none', null, 'block']}
           src="/book-course.jpg"
           alt="Photo by Road Trip with Raj on Unsplash"
           htmlWidth={800}
@@ -27,11 +28,12 @@ const BookOurCourse = () => {
         </VStack>
 
         <HStack
+          mt={[10, null, 0]}
           spacing={16}
           w="full"
           color="white"
           justify="flex-end"
-          pos="absolute"
+          pos={['initial', null, 'absolute']}
           bottom="-85px"
           bgColor="blue.800"
           p={10}

@@ -22,12 +22,12 @@ export default function Home() {
         />
       </Head>
       <Hero />
-      {/* <Brands />
+      <Brands />
       <PopularCourses />
       <BookOurCourse />
-      <Testimonials />
-      <Mentors />
-      <BannerNeedHelp /> */}
+      {/* <Testimonials /> */}
+      {/* <Mentors /> */}
+      {/* <BannerNeedHelp /> */}
     </>
   )
 }
