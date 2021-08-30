@@ -62,7 +62,7 @@ const PopularCourses = () => {
   return (
     <Box maxW={['full', '8xl']} w="full" mx="auto" my={20} px={[4, 4, 0]}>
       <VStack justify="center" spacing={5}>
-        <Heading borderBottom="3px solid black">Our Most Popular Courses</Heading>
+        <Heading fontSize={['4xl', '5xl']}>Our Most Popular Courses</Heading>
         <Text color="gray.500" textAlign="center" w={['full', null, '60%', '40%']}>
           It&apos;s a long estabilished fact that a reader will be distracted by the readable of a page when looking at
           it&apos;s layout

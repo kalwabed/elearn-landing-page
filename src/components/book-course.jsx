@@ -1,8 +1,8 @@
-import { Box, Button, Flex, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
 const BookOurCourse = () => {
   return (
-    <Box pos="relative" maxW={['full', '8xl']} w="full" mx="auto" py={10} my={20}>
+    <Box pos="relative" maxW={['full', '8xl']} w="full" mx="auto" py={10} my={[12, null, 20]}>
       <Flex flexDir={['column', null, 'row']} justify="space-between" align="center">
         <Image
           pos="relative"
@@ -13,8 +13,8 @@ const BookOurCourse = () => {
           zIndex={30}
           shadow="md"
         />
-        <VStack align="start" spacing={10} ml={12}>
-          <Heading textTransform="capitalize" fontSize="6xl">
+        <VStack align="start" spacing={10} ml={[0, null, 12]} px={[4, 4, 0]}>
+          <Heading textTransform="capitalize" fontSize={['4xl', '6xl']}>
             Book our course & improve your skill
           </Heading>
           <Text fontWeight="light">
@@ -27,7 +27,8 @@ const BookOurCourse = () => {
           </Button>
         </VStack>
 
-        <HStack
+        <Stack
+          direction={['column', null, 'row']}
           mt={[10, null, 0]}
           spacing={16}
           w="full"
@@ -39,18 +40,24 @@ const BookOurCourse = () => {
           p={10}
         >
           <Box>
-            <Heading textDecor="underline">2.5K+</Heading>
+            <Heading fontSize={['4xl', null, '2xl']} textDecor="underline">
+              2.5K+
+            </Heading>
             <Text mt={3}>Online Courses</Text>
           </Box>
           <Box>
-            <Heading textDecor="underline">500</Heading>
+            <Heading fontSize={['4xl', null, '2xl']} textDecor="underline">
+              500
+            </Heading>
             <Text mt={3}>Experience Mentors</Text>
           </Box>
           <Box>
-            <Heading textDecor="underline">1.8M+</Heading>
+            <Heading fontSize={['4xl', null, '2xl']} textDecor="underline">
+              1.8M+
+            </Heading>
             <Text mt={3}>Rating & Reviews</Text>
           </Box>
-        </HStack>
+        </Stack>
       </Flex>
     </Box>
   )

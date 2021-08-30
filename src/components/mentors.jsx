@@ -8,13 +8,13 @@ const mentors = [
 
 const Mentors = () => {
   return (
-    <Box my={20} py={20} bgColor="blue.800" color="white">
-      <VStack maxW={['full', '8xl']} w="full" align="start" mx="auto" spacing={12}>
-        <Heading w="50%" fontSize="6xl" textTransform="capitalize">
+    <Box my={[10, 20]} py={20} bgColor="blue.800" color="white">
+      <VStack maxW={['full', '8xl']} px={[4, 4, 0]} w="full" align={['center', null, 'start']} mx="auto" spacing={12}>
+        <Heading w={['full', null, '50%']} fontSize={['5xl', '6xl']} textTransform="capitalize">
           Meet with our professional mentors
         </Heading>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={10}>
+        <Grid templateColumns={['repeat(1, 1fr)', null, 'repeat(3, 1fr)']} gap={10}>
           {mentors.map(mentor => (
             <GridItem key={mentor.pictureUrl} colSpan={1}>
               <Mentor {...mentor} />
@@ -33,7 +33,7 @@ const Mentor = ({ name, pictureUrl, role }) => {
   return (
     <Box>
       <VStack p={4} bgColor="white" color="black" roundedTop="sm">
-        <Image src={pictureUrl} alt="Image from unsplah" boxSize={500} rounded="sm" />
+        <Image src={pictureUrl} alt="Image from unsplah" boxSize={[300, 500]} rounded="sm" />
         <Heading>{name}</Heading>
         <Text fontSize="sm">{role}</Text>
       </VStack>
